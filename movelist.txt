@@ -1,0 +1,32 @@
+a1;6;2+: Score 2 points;attack;vn;solid;a
+a1;2;2+: -3 to rival's next response value;set_up;vn;harry;v
+a1;2;2+: +3 to your next action value;ready;av;feint;nv
+a1;1;2+: May make it your action next;pounce;vn;fast;a
+a1;1;2+: May reverse your action order;dizzy;sv;maddening;a
+a1;1;2+: May advance rival's actions 1;press;v;close;av
+a1;1;2+: May reverse your response order;confuse;v;dance;vn
+a1;2;2+: May advance rival's responses 1;overwhelm;v;tactic;n
+a2;4;7+: Score 1 extra point;vicious;s;raid;vn
+a2;1;7+: Rival's next action gets -1 point;daze;v;weaken;v
+a2;2;7+: +3 to your next response value;defensive;a;guard;v
+a2;2;7+: -2 to rival's current response;exploit;v;weakness;n
+a2;1;7+: -3 to rival's next action value;destroy;v;obscure;av
+a2;1;7+: May advance actions by 1;take_advantage;v;advance;nv
+a2;3;7+: Next action scores 2 extra points;power;n;empower;v
+a2;1;7+: May reverse rival's responses;spin;vn;strange;a
+r1;1;2+: Rival's action scores -2 points;guard;vn;blockade;nv
+r1;2;2+: Rival's action cannot score extra;armour;vn;tough;a
+r1;1;2+: -3 to rival's next response;trap;vn;counter;v
+r1;2;2+: +3 to your next action;furious;s;anger;n
+r1;1;2+: -2 to rival's action;armoured;a;shell;n
+r1;1;2+: May make it rival's action next;draw_in;v;toughness;n
+r1;2;2+: May advance actions by 1;clever;s;strategy;n
+r1;1;2+: May reverse rival's action order;sudden;a;surprise;nv
+r2;2;7+: Score 1 point;counterattack;nv;hidden;a
+r2;1;7+: Rival's action scores -2 points;strengthen;v;defenses;n
+r2;2;7+: Next action scores 1 extra point;resurgence;n;build_up;v
+r2;1;7+: +3 to next response value;fortify;v;escape;nv
+r2;1;7+: -2 to rival's next response value;reversal;n;karma;n
+r2;1;7+: May reverse rival's response order;bewilder;v;taunt;vn
+r2;1;7+: May advance responses by 1;ready;av;contempt;n
+r2;1;7+: May advance rival's responses by 1;position;v;insult;vn

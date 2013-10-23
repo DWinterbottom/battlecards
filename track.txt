@@ -1,1 +1,1 @@
-themes.txt;movelist.txt;newtest.svg;newout.svg;200;0
+themes.txt;movelist.txt;artbacks.svg;Artback.svg;200;150

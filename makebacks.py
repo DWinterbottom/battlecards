@@ -84,10 +84,10 @@ for monstnum in range(int(numfinished),int(numtotal)):
     x = wordgen.newword(themes[0][0],themes[0][1])
     y = wordgen.newword(themes[1][0],themes[1][1])
     mtagline = 'the '+ (x.replace('_',' ') + ' '+ y.replace('_',' ')).title() +' Monster'
-    #print mtagline
     #generate a name using words related to x and y
     #mname = wordgen.syllashuffle( wordgen.newword(x,'',(2,1)).split('_')[0] ,
     #  wordgen.newword(y,'',(2,1)).split('_')[0] )
+    print mtagline
     print 'name the monster: '+ wordgen.newword(x,'',(2,1)).split('_')[0] +' '+ wordgen.newword(y,'',(2,1))
     mname = raw_input()
     mname = mname.title()
@@ -146,6 +146,8 @@ for monstnum in range(int(numfinished),int(numtotal)):
 #begin section needing user input
     while True:
       while True:
+        startwords = list()
+        endwords = list()
         a = [c for c in movenameformats[0][0]]
         b = [c for c in movenameformats[0][1]]
         for uword in allwords: 
@@ -162,10 +164,13 @@ for monstnum in range(int(numfinished),int(numtotal)):
       word1 = random.sample(startwords,1)[0]
       word2 = random.sample(endwords,1)[0]
       
-      rnname = wordgen.newword(word1[0],movenameformats[0][0]) + ' ' + wordgen.newword(word2[0],movenameformats[0][1])
-      print 'is \''+rnname +'\' a good name, type x to continue'
-      isit = raw_input().lower
-      if isit=='x': break
+      try:
+        rnname = wordgen.newword(word1[0],movenameformats[0][0]) + ' ' + wordgen.newword(word2[0],movenameformats[0][1])
+        print 'is \''+rnname +'\' a good name? type x to continue'
+        isit = raw_input().lower()
+        if isit=='x': print 'cool'; break
+      except: 
+        print 'An error occured, trying again...'
 #end section needing user input
     monster['an'+str(attnum)]= rnname.replace('_',' ').title()      
     
@@ -197,6 +202,8 @@ for monstnum in range(int(numfinished),int(numtotal)):
 #begin section needing user input
     while True:
       while True:
+        startwords = list()
+        endwords = list()
         a = [c for c in movenameformats[0][0]]
         b = [c for c in movenameformats[0][1]]
         for uword in allwords:
@@ -211,10 +218,13 @@ for monstnum in range(int(numfinished),int(numtotal)):
       word1 = random.sample(startwords,1)[0]
       word2 = random.sample(endwords,1)[0]
       
-      rnname = wordgen.newword(word1[0],movenameformats[0][0]) + ' ' + wordgen.newword(word2[0],movenameformats[0][1])
-      print 'is \''+rnname +'\' a good name, type x to continue'
-      isit = raw_input().lower
-      if isit=='x': break
+      try:
+        rnname = wordgen.newword(word1[0],movenameformats[0][0]) + ' ' + wordgen.newword(word2[0],movenameformats[0][1])
+        print 'is \''+rnname +'\' a good name? type x to continue'
+        isit = raw_input().lower()
+        if isit=='x': print 'okay'; break
+      except: 
+        print 'An error occured, trying again...'
 #end section needing user input
     monster['rn'+str(attnum)]= rnname.replace('_',' ').title()
       
@@ -247,7 +257,7 @@ for monstnum in range(int(numfinished),int(numtotal)):
   output.close()
 #Convert file to .pdf
   try:
-    ret = os.system('inkscape \"'+oname+'.svg\" --export-area-drawing --export-dpi=300 --export-pdf=\"'+oname+'.pdf\"')
+    ret = os.system('inkscape \"'+oname+'.svg\" --export-area-drawing --export-text-to-path --export-dpi=300 --export-pdf=\"'+oname+'.pdf\"')
     print 'pdf made: ' + str(ret)  
   except Exception as exc:
     print str(exc)
